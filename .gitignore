@@ -9,3 +9,5 @@
 
 # hide "bin" folder
 /bin
+
+/Module4 - CodeQuality/node_modules/
