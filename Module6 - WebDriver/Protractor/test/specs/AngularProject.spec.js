@@ -1,30 +1,39 @@
+//browser.ignoreSynchrnization = true;
+const expect = require("chai").expect;
+const {Builder, By, Key, until, driver} = require('selenium-webdriver');
 
+describe("Header controls are clickable", function() {
+    beforeEach(function(){
+        let width = 1780;
+        let height = 1000;
+        return browser.driver.manage().window().setSize(width, height);
+    });
 
+    it("Header links are clickable", async function() {
+        browser.waitForAngularEnabled(false);
+        await browser.get('https://www.forbes.com/');
+        await browser.findElement(By.linkText('Billionaires')).click();
+        await browser.findElement(By.linkText('Innovation')).click();
+        await browser.findElement(By.linkText('Leadership')).click();
+        await browser.findElement(By.linkText('Money')).click();
+        await browser.findElement(By.linkText('Business')).click();
+        await browser.findElement(By.linkText('Small Business')).click();
+        await browser.findElement(By.linkText('Lifestyle')).click();
+        await browser.findElement(By.linkText('Lists')).click();
+        await browser.findElement(By.linkText('Advisor')).click();
+        await browser.findElement(By.linkText('Featured')).click();
+        await browser.findElement(By.linkText('Breaking')).click();
+        await browser.findElement(By.linkText('More')).click();
+    });
 
-//     it("switching between tabs", async function(){
+    it("Header links are clickable", async function() {
+        browser.waitForAngularEnabled(false);
+        await browser.get('https://www.forbes.com/');
+        await browser.findElement(By.css('#aria-label')).click();
+        await browser.findElement(By.ninput('Search')).sendKeys('career', Key.RETURN);
 
-//         await browser.get('https://clarity.design/');
+    });
 
-//         //await expect(browser.getTitle().toContain('Airline Tickets & Flights: Book Direct with Delta Air Lines - Official Site'));
-//         //await browser.findElement(by.linkText('Documentation')).click();
-
-//         await browser.findElement(by.linkText('Icons')).click();
-//         await browser.findElement(by.buttonText('GET STARTED')).click();
-
-//         // await browser.findElement(by.linkText('Community')).click();
-//         // await browser.findElement(by.linkText("What's New")).click();
-//         // await browser.switchTo().window('https://github.com/vmware/clarity/issues');
-//         // //await browser.getWindowHandle();
-//         // await browser.findElement(by.buttonText('Read the guide')).click();
-//         //await browser.wait(until.titleContain('Issues · vmware/clarity'), 100000);
-//         //expect(browser.getCurrentUrl.toContain('https://github.com/vmware/clarity/issues'));
-//         //expect(browser.getTitle().toContain('Help Center : Get Help with Reservations, Baggage & More : Delta Air Lines'));
-//         // await browser.findElement(By.name('q')).sendKeys('career', Key.RETURN);
-//         // await browser.wait(until.titleIs('Search'), 1000);
-//         // await browser.findElement(By.link('https://www.epam.com/about/who-we-are/contact')).click();
-//         // await browser.wait(until.classIs('title__bottom-line'), 100000);
-//        // expect(browser.getTitle().toContain('Help Center : Get Help with Reservations, Baggage & More : Delta Air Lines'));
-//     })
-// })
+});
 
 

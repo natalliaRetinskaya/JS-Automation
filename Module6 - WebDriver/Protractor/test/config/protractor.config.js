@@ -5,7 +5,7 @@ exports.config = {
     framework: "jasmine",
     specs: [
         '../specs/AngularProject.spec.js',
-        '../specs/NoAngularProject.spec.js'
+        '../specs/noAngularProject.spec.js'
     ],
     capabilities: {
         'browserName': 'chrome',
