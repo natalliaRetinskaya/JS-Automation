@@ -4,7 +4,8 @@ exports.config = {
     directConnect: true,
     framework: "jasmine",
     specs: [
-        '../specs/*.js'
+        '../specs/AngularProject.spec.js',
+        '../specs/NoAngularProject.spec.js'
     ],
     capabilities: {
         'browserName': 'chrome',
