@@ -1,0 +1,22 @@
+{
+  "name": "webdriver",
+  "version": "1.0.0",
+  "description": "webdriver",
+  "main": "config.js",
+  "dependencies": {
+    "chromedriver": "^81.0.0",
+    "selenium-standalone": "^6.17.0",
+    "use-promise-manager": "^1.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "jasmine": "^3.5.0",
+    "mocha": "^7.1.1",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "scripts": {
+    "test": "npm run test.js"
+  },
+  "author": "Natallia Ratsinskaya",
+  "license": "ISC"
+}

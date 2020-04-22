@@ -1,0 +1,15 @@
+# hide files with .db extension
+*.db
+
+# hide files with .log extensions
+*.log
+
+# hide "target" folder
+/target
+
+# hide "bin" folder
+/bin
+
+/Module4 - CodeQuality/node_modules/
+/Module5 - UnitTesting/node_modules/
+/node_modules/
