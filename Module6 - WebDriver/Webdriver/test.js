@@ -7,7 +7,6 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
      await driver.findElement(By.className('header-search__button header__icon')).click();
      await driver.findElement(By.name('q')).sendKeys('career', Key.RETURN);
      await driver.wait(until.titleIs('Search'), 10000);
-     await driver.wait(until.elementIsVisible('.search-results__title-link[href=\"/careers\"]'));
    } finally {
      await driver.quit();
    }
