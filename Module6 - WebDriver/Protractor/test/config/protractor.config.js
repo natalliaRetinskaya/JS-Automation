@@ -9,6 +9,10 @@ exports.config = {
     ],
     capabilities: {
         'browserName': 'chrome',
+        chromeOptions: 
+        { 
+           args: ['--window-size=1800,900'] 
+        },
         shardTestFiles: yargs.instances > 1,
         maxInstances: yargs.instances || 1,
     },
