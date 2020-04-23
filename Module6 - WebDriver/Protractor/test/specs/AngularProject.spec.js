@@ -12,13 +12,13 @@ describe("Header controls are clickable", function() {
         await browser.findElement(By.css('[aria-label=\"Leadership\"]')).click();
         await browser.findElement(By.css('[aria-label=\"Money\"]')).click();
         await browser.findElement(By.css('[aria-label=\"Business\"]')).click();
-        await browser.findElement(By.css('[aria-label=\"Small Business\"]')).click();
+        await browser.findElement(By.css('[data-title=\"Small Business\"]')).click();
         await browser.findElement(By.css('[aria-label=\"Lifestyle\"]')).click();
         await browser.findElement(By.css('[aria-label=\"Lists\"]')).click();
         await browser.findElement(By.css('[aria-label=\"Advisor\"]')).click();
-        //await browser.findElement(By.css('[aria-label=\"Featured\"]').click();
+        await browser.findElement(By.css('[data-title=\"Featured\"]')).click();
         await browser.findElement(By.css('[aria-label=\"Breaking\"]')).click();
-        await browser.findElement(By.css('[aria-label=\"More\"]')).click();
+        await browser.findElement(By.css('[data-title=\"More\"]')).click();
     });
 
     it("Search", async function() {
