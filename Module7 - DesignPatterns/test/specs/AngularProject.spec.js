@@ -1,5 +1,7 @@
 browser.ignoreSynchrnization = true;
 const expect = require("chai").expect;
+const PageFactory = require("../utils/page_objects_forbes/pageFactory");
+const EC = protractor.ExpectedConditions;
 const {Builder, By, Key, until, driver} = require('selenium-webdriver');
 
 describe("Header controls are clickable", function() {
@@ -7,10 +9,12 @@ describe("Header controls are clickable", function() {
     //     browser.close(); 
     // });
 
-    it("First Header links are clickable", async function() {
+    it("First Header link is clickable", async function() {
         browser.waitForAngularEnabled(false);
-        await browser.get('https://www.forbes.com/');
-        await browser.findElement(By.css('[aria-label=\"Billionaires\"]')).click();
+        await PageFactory.getPage("Home").open();
+        const firstNavigationButton = PageFactory.getPage("Home").Header.navigationButtons.collection.get(0);
+        await browser.wait(EC.elementToBeClickable(firstNavigationButton), 10000);
+        //await browser.findElement(By.css('[aria-label=\"Billionaires\"]')).click();
         // await browser.findElement(By.css('[aria-label=\"Innovation\"]')).click();
         // await browser.findElement(By.css('[aria-label=\"Leadership\"]')).click();
         // await browser.findElement(By.css('[aria-label=\"Money\"]')).click();
