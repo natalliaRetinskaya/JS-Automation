@@ -20,16 +20,37 @@ describe("Header check", function() {
 
     });
 
-    it("Search", async function() {
+    it("Search for 'career' open appropriate page", async function() {
         browser.waitForAngularEnabled(false);
         await PageFactory.getPage("Home").open();
         await browser.findElement(By.css('[data-ga-track=\"U18 - Search Icon\"]')).click();
         browser.actions().sendKeys('career', protractor.Key.ENTER).perform()
         const currentUrl = await browser.getCurrentUrl();
         expect(currentUrl).contains("career")
-        //await browser.findElement(By.input('Search')).sendKeys('career', Key.RETURN);
-        //await browser.findElement(By.input('Search')).sendKeys('career');
-        //browser.actions().sendKeys(protractor.Key.ENTER).perform()
+
+    });
+
+    it("background of search page is grey", async function() {
+        browser.waitForAngularEnabled(false);
+        await PageFactory.getPage("Home").open();
+        await browser.findElement(By.css('[data-ga-track=\"U18 - Search Icon\"]')).click();
+        
+        
+
+    });
+
+    it("scroll to the footer", async function() {
+        browser.waitForAngularEnabled(false);
+        await PageFactory.getPage("Home").open();
+        //return browser.executeScript('window.scrollTo(0, 0)')
+        await browser.executeScript("return window.scrollMaxY")
+
+    });
+
+    it("zoom level to 80%", async function() {
+        browser.waitForAngularEnabled(false);
+        await PageFactory.getPage("Home").open();
+        browser.executeScript("document.body.style.zoom='80");
 
     });
 
