@@ -14,7 +14,7 @@ exports.config = {
            args: ['--window-size=1800,900'] 
         },
         shardTestFiles: yargs.instances > 1,
-        maxInstances: yargs.instances || 1,
+        maxInstances: yargs.instances || 3,
     },
     baseUrl: 'localhost',
     mochaOpts: {

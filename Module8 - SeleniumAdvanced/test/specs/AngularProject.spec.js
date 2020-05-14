@@ -1,15 +1,17 @@
+
 browser.ignoreSynchrnization = true;
 const expect = require("chai").expect;
 const PageFactory = require("../utils/page_objects_forbes/pageFactory");
 const EC = protractor.ExpectedConditions;
 const {Builder, By, Key, until, driver} = require('selenium-webdriver');
 
-describe("Header check", function() {
+
+describe("Header check", function () {
     // afterEach(function(){
     //     browser.close(); 
     // });
 
-    it("First Header link is clickable", async function() {
+    it("First Header link is clickable", async function () {
         browser.waitForAngularEnabled(false);
         await PageFactory.getPage("Home").open();
         const firstNavigationButton = PageFactory.getPage("Home").Header.navigationButtons.collection.get(0);
@@ -20,7 +22,7 @@ describe("Header check", function() {
 
     });
 
-    it("Search for 'career' open appropriate page", async function() {
+    it("Search for 'career' open appropriate page", async function () {
         browser.waitForAngularEnabled(false);
         await PageFactory.getPage("Home").open();
         await browser.findElement(By.css('[data-ga-track=\"U18 - Search Icon\"]')).click();
@@ -30,31 +32,29 @@ describe("Header check", function() {
 
     });
 
-    it("background of search page is grey", async function() {
-        browser.waitForAngularEnabled(false);
-        await PageFactory.getPage("Home").open();
-        await browser.findElement(By.css('[data-ga-track=\"U18 - Search Icon\"]')).click();
-        
-        
 
-    });
-
-    it("scroll to the footer", async function() {
+    it("scroll to the footer", async function () {
         browser.waitForAngularEnabled(false);
         await PageFactory.getPage("Home").open();
         //return browser.executeScript('window.scrollTo(0, 0)')
-        await browser.executeScript("return window.scrollMaxY")
+        return browser.executeScript("window.scrollTo(0, document.body.scrollHeight)")
 
     });
 
-    it("zoom level to 80%", async function() {
+    it("zoom level to 80%", async function () {
         browser.waitForAngularEnabled(false);
         await PageFactory.getPage("Home").open();
         browser.executeScript("document.body.style.zoom='80");
+        return browser.sleep(2000);
 
     });
 
+    // it("highlight header element", async function() {
+    //     browser.waitForAngularEnabled(false);
+    //     await PageFactory.getPage("Home").open();
+    //     browser.executeScript("document.body.style.zoom='80");
+    //     return browser.sleep(2000);
+
+    // });
+
 });
-
-
-
