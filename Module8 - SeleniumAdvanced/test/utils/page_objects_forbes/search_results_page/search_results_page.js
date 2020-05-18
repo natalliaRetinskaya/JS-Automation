@@ -1,11 +1,10 @@
 const BasePage = require("../base_page/base_page");
 const Collection = require("../base_elements/base_collection");
 
-class HomePage extends BasePage {
+class SearchResultsPage extends BasePage {
     constructor() {
       super();
-      this.url = "https://www.forbes.com/";
-      this.sections = new Collection("Sections", "div.section:not(.header)");
+      this.url = "https://www.forbes.com/search/";
     };
     open() {
       return super.open(this.url);
@@ -13,4 +12,4 @@ class HomePage extends BasePage {
     //move to the Base page
 };
 
-module.exports = HomePage;
+module.exports = SearchResultsPage;

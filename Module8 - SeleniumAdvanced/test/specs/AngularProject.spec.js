@@ -1,72 +1,56 @@
 
 browser.ignoreSynchrnization = true;
-const expect = require("chai").expect;
+let chaiAsPromised = require("chai-as-promised");
+let expect = require("chai").use(chaiAsPromised).expect;
 const PageFactory = require("../utils/page_objects_forbes/pageFactory");
 const EC = protractor.ExpectedConditions;
 
 
 describe("Header check", function () {
-    // afterEach(function(){
-    //     browser.close(); 
-    // });
+    browser.waitForAngularEnabled(false);
+    let homePage = PageFactory.getPage("Home");
 
     it("First Header link is clickable", async function () {
-        browser.waitForAngularEnabled(false);
-        await PageFactory.getPage("Home").open();
-        const firstNavigationButton = PageFactory.getPage("Home").Header.navigationButtons.collection.get(0);
+        await homePage.open();
+        const firstNavigationButton = homePage.Header.navigationButtons.collection.get(0);
         await browser.wait(EC.elementToBeClickable(firstNavigationButton), 10000);
         await browser.actions().click(firstNavigationButton).perform();
         browser.wait(EC.urlContains('billionaires'), 5000);
-        // const currentUrl = await browser.getCurrentUrl();
-        // expect(currentUrl).contains("billionaires")
+
+    });
+
+    it("Hover on header link expands additional menu", async function () {
+        await homePage.open();
+        const secondNavigationButton = homePage.Header.navigationButtons.collection.get(0);
+        await browser.wait(EC.elementToBeClickable(secondNavigationButton), 10000);
+        await browser.actions().mouseMove(secondNavigationButton).perform();
+        expect(homePage.Header.secondSubNav.element.isDisplayed()).to.be.eventually.true;
 
     });
 
     it("Search for 'career' open appropriate page", async function () {
-        browser.waitForAngularEnabled(false);
-        await PageFactory.getPage("Home").open();
-        await browser.findElement(By.css('[data-ga-track=\"U18 - Search Icon\"]')).click();
+        await homePage.open();
+        await homePage.Header.searchButton.clickSearch;
         browser.actions().sendKeys('career', protractor.Key.ENTER).perform()
-        browser.wait(EC.urlContains('career'), 5000);
-        // const currentUrl = await browser.getCurrentUrl();
-        // expect(currentUrl).contains("career")
+        browser.wait(EC.urlContains('/search/?q=career'), 5000);
 
     });
 
+
     it("Search for 'million' open appropriate page", async function () {
-        browser.waitForAngularEnabled(false);
-        await PageFactory.getPage("Home").open();
-        await browser.findElement(By.css('[data-ga-track=\"U18 - Search Icon\"]')).click();
+        await homePage.open();
+        await homePage.Header.searchButton.clickSearch;
         browser.actions().sendKeys('million').perform()
         browser.actions().mouseMove(element(by.css('[class=\"search-modal__submit\"]'))).mouseDown().mouseUp().perform()
-        browser.wait(EC.urlContains('million'), 5000);
-        // const currentUrl = await browser.getCurrentUrl();
-        // expect(currentUrl).contains("million")
+        browser.wait(EC.urlContains('/search/?q=million'), 5000);
 
     });
 
     it("scroll to the footer", async function () {
-        browser.waitForAngularEnabled(false);
-        await PageFactory.getPage("Home").open();
-        //return browser.executeScript('window.scrollTo(0, 0)')
-        return browser.executeScript("window.scrollTo(0, document.body.scrollHeight)")
-
+        await homePage.open();
+        await browser.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        expect(homePage.Footer.forbesLogo.element.isDisplayed()).to.be.eventually.true;
+    
     });
-
-    // it("zoom level to 80%", async function () {
-    //     browser.waitForAngularEnabled(false);
-    //     await PageFactory.getPage("Home").open();
-    //     browser.executeScript("document.body.style.zoom='80");
-    //     return browser.sleep(2000);
-
-    // });
-
-    // it("highlight header element", async function() {
-    //     browser.waitForAngularEnabled(false);
-    //     await PageFactory.getPage("Home").open();
-    //     browser.executeScript("document.body.style.zoom='80");
-    //     return browser.sleep(2000);
-
-    // });
 
 });
