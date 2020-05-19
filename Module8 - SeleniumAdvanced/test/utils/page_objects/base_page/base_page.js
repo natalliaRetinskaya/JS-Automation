@@ -1,8 +1,10 @@
 const Header = require('./header');
+const Footer = require('./footer');
 
 class BasePage {
     constructor() {
         this.Header = new Header();
+        this.Footer = new Footer();
     };
     wait(waitInMilliseconds) {
         return browser.sleep(waitInMilliseconds);
