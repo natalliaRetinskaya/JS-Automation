@@ -1,6 +1,6 @@
 let chaiAsPromised = require("chai-as-promised");
 let expect = require("chai").use(chaiAsPromised).expect;
-const PageFactory = require("../utils/page_objects/pageFactory");
+const PageFactory = require("../utils/page_objects_epam/pageFactory");
 const EC = protractor.ExpectedConditions;
 
 

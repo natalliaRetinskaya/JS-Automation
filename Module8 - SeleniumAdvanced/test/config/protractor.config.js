@@ -4,8 +4,8 @@ exports.config = {
     directConnect: true,
     framework: "mocha",
     specs: [
-        '../specs/AngularProject.spec.js',
-        '../specs/noAngularProject.spec.js'
+        '../specs/ForbesProject.spec.js',
+        '../specs/EpamProject.spec.js'
     ],
     multiCapabilities:
     [ 
