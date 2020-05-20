@@ -10,6 +10,7 @@ class HomePage extends BasePage {
     open() {
       return super.open(this.url);
     };
+    //move to the Base page
 };
 
 module.exports = HomePage;
