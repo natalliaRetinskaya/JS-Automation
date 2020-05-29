@@ -9,9 +9,9 @@ exports.config = {
         '../specs/EpamProject2.spec.js'
     ],
     capabilities: {
-        'browserName': 'chrome',
         shardTestFiles: yargs.instances > 1,
         maxInstances: yargs.instances || 1,
+        browserName: yargs.browser || 'chrome',
     },
 
     baseUrl: 'localhost',
