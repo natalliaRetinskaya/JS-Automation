@@ -1,11 +1,12 @@
-
+const yargs = require('yargs').argv;
 
 exports.config = {
     directConnect: true,
     framework: "mocha",
     specs: [
         '../specs/ForbesProject.spec.js',
-        '../specs/EpamProject.spec.js'
+        '../specs/EpamProject.spec.js',
+        '../specs/EpamProject2.spec.js'
     ],
     capabilities: {
         'browserName': 'chrome',

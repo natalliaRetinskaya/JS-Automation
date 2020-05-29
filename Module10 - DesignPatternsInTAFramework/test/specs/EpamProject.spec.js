@@ -34,22 +34,6 @@ describe("Home page header", function () {
         await browser.wait(EC.urlContains('what-we-do'), 5000);
     });
 
-    it("EPAM: Search for 'career' open appropriate page", async function () {
-        await homePage.open();
-        await browser.wait(EC.elementToBeClickable(homePage.Header.searchButton.element), 10000);
-        await homePage.Header.clickSearch();
-        await browser.wait(EC.visibilityOf(homePage.Header.searchField.element), 10000);
-        await homePage.Header.searchField.element.sendKeys('career')
-        browser.actions().sendKeys(protractor.Key.ENTER).perform()
-        await browser.wait(EC.urlContains('career'), 10000);
-    });
-
-    it("scroll to the footer", async function () {
-        await homePage.open();
-        await browser.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        expect(await homePage.Footer.footerCopyright.element.isDisplayed()).to.be.true;
-    });
-
     it("Location selector can be expanded", async function () {
         await homePage.open();
         await browser.wait(EC.elementToBeClickable(homePage.Header.locationSelectButton.element), 10000);
