@@ -5,14 +5,14 @@ Feature: Home Page Title
     Scenario: Page title
         Given I open "https://www.epam.com" url
         Then Page title should be "EPAM | Enterprise Software Development, Design & Consulting"
-        When I wait "10" seconds
+        When I wait "2" seconds
 
 
 
     Scenario Outline: Menu pages
         Given I open "<URL>" url
         Then Page title should be "<Title>"
-        When I wait "10" seconds
+        When I wait "1" seconds
 
         Examples:
             | URL                               | Title                                                              |
