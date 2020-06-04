@@ -1,0 +1,472 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Home Page Title",
+    "line": 2,
+    "id": "home-page-title",
+    "tags": [
+      {
+        "name": "@smoke",
+        "line": 1
+      }
+    ],
+    "uri": "test\\features\\home_page.feature",
+    "elements": [
+      {
+        "id": "home-page-title;page-title",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Page title",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open \"https://www.epam.com\" url",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1907000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Page title should be \"EPAM | Enterprise Software Development, Design & Consulting\"",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I wait \"10\" seconds",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10002000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "home-page-title;menu-pages",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Menu pages",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I open \"https://www.epam.com/what-we-do\" url",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 988000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Page title should be \"What We Do | Technology Consulting & Engineering Services | EPAM\"",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I wait \"10\" seconds",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10001000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "home-page-title;menu-pages",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Menu pages",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I open \"https://www.epam.com/how-we-do-it\" url",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1023000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Page title should be \"How We Do It | Agile Product Engineering Services | EPAM\"",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I wait \"10\" seconds",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10002000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "home-page-title;menu-pages",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Menu pages",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I open \"https://www.epam.com/our-work\" url",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 782000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Page title should be \"Explore our Work | EPAM Customer Stories, Brochures & Accelerators\"",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I wait \"10\" seconds",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10001000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "home-page-title;menu-pages",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Menu pages",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I open \"https://www.epam.com/insights\" url",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 907000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Page title should be \"Discover our Latest Insights | EPAM\"",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I wait \"10\" seconds",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10001000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "home-page-title;menu-pages",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Menu pages",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I open \"https://www.epam.com/about\" url",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 858000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Page title should be \"One of the Fastest-Growing Public Tech Companies | About EPAM\"",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 589000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I wait \"10\" seconds",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10002000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "home-page-title;menu-pages",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Menu pages",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I open \"https://www.epam.com/careers\" url",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1236000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Page title should be \"Explore Professional Growth Opportunities | EPAM Careers\"",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I wait \"10\" seconds",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10001000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
