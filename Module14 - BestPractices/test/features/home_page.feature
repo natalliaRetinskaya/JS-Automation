@@ -18,10 +18,10 @@ Feature: Home Page Title
             | URL                               | Title                                                              |
             | https://www.epam.com/what-we-do   | What We Do \|Technology Consulting & Engineering Services \|EPAM   |
             | https://www.epam.com/how-we-do-it | How We Do It \|Agile Product Engineering Services \|EPAM           |
-            | https://www.epam.com/our-work     | Explore our Work \|EPAM Customer Stories, Brochures & Accelerators |
-            | https://www.epam.com/insights     | Discover our Latest Insights \|EPAM                                |
-            | https://www.epam.com/about        | One of the Fastest-Growing Public Tech Companies \|About EPAM      |
-            | https://www.epam.com/careers      | Explore Professional Growth Opportunities \|EPAM Careers           |
+            # | https://www.epam.com/our-work     | Explore our Work \|EPAM Customer Stories, Brochures & Accelerators |
+            # | https://www.epam.com/insights     | Discover our Latest Insights \|EPAM                                |
+            # | https://www.epam.com/about        | One of the Fastest-Growing Public Tech Companies \|About EPAM      |
+            # | https://www.epam.com/careers      | Explore Professional Growth Opportunities \|EPAM Careers           |
 
 
 

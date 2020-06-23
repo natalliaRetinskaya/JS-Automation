@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Home Page Title" time="10.57" tests="3" failures="0" errors="0" skipped="0">
+    <testcase name="Page title" classname="home-page-title;page-title" time="5.163"/>
+    <testcase name="Menu pages" classname="home-page-title;menu-pages" time="2.602"/>
+    <testcase name="Menu pages" classname="home-page-title;menu-pages" time="2.805"/>
+  </testsuite>
+  <testsuite name="Home Page Title1" time="3.819" tests="1" failures="0" errors="0" skipped="0">
+    <testcase name="Page title" classname="home-page-title1;page-title" time="3.819"/>
+  </testsuite>
+</testsuites>
