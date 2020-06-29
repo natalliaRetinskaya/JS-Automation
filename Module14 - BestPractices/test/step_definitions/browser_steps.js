@@ -2,7 +2,6 @@ const {When, Then, setDefaultTimeout} = require('cucumber');
 const {expect} = require('chai')
 setDefaultTimeout(60000);
 browser.ignoreSynchrnization = true;
-const {Builder, By, Key, until, driver} = require('selenium-webdriver');
 const PageFactory = require("../utils/page_objects_epam/pageFactory");
 const homePage = PageFactory.getPage("Home");
 

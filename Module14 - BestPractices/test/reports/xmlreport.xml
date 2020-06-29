@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Home Page Title1" time="7.373" tests="1" failures="0" errors="0" skipped="0">
-    <testcase name="Perform search" classname="home-page-title1;perform-search" time="7.373"/>
+  <testsuite name="Home Page Title1" time="8.08" tests="1" failures="0" errors="0" skipped="0">
+    <testcase name="Perform search" classname="home-page-title1;perform-search" time="8.08"/>
   </testsuite>
 </testsuites>
