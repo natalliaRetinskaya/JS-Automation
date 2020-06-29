@@ -15,16 +15,6 @@ const options = {
     inputJsonFile: path.join(__dirname, '../reports/report.json'),
     outputXmlFile: path.join(__dirname, '../reports/xmlreport.xml'),
 }
- 
-
-
-
-// const reporterOptions = ({
-//     reporter: 'mocha-junit-reporter',
-//     reporterOptions: {
-//         mochaFile: '../reports/report.xml'
-//     }
-// });
 
 exports.config = {
     allScriptsTimeout: 60000,
@@ -54,11 +44,7 @@ exports.config = {
         return browser.waitForAngularEnabled(false);
     },
     afterLaunch: () => {
-    //    let xmlReport = reporter.generate(reportOptions);
-    //    let result = convert.json2xml(xmlReport);
-    //    return result
        cucumberJunitConvert.convert(options) 
-       return reporter.generate(reportOptions)
-       
+       return reporter.generate(reportOptions)   
     }
 };
