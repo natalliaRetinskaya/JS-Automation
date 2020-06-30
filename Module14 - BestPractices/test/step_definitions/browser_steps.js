@@ -27,19 +27,10 @@ Then(/^I click "Search" icon$/, async function(){
     await homePage.Header.clickSearch();
 });
 
-Then(/^I enter "career" into search field$/, async function(){
+Then(/^I enter "([^"]*)" into search field$/, async function(searchTerm){
   await homePage.Header.clickSearch();
-  await homePage.Header.searchField.element.sendKeys('career')
+  await homePage.Header.searchField.element.sendKeys(searchTerm)
 });
 
-
-
-
-// Then(/^Count of "([^"]*)" should( not)? be "([^"]*)"$/, async (expectedNumber) => {
-//     let result = await element.count();
-//     expectedNumber = parseInt(expectedNumber);
-//         return expect(result).to.equal(expectedNumber);
-
-// });
 
 
